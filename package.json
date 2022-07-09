@@ -1,0 +1,17 @@
+{
+  "name": "node-slack-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@slack/bolt": "^3.11.3",
+    "dotenv": "^16.0.1",
+    "youtube-notification": "^1.1.0"
+  }
+}
