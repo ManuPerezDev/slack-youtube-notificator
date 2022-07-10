@@ -1,16 +1,16 @@
-const YouTubeNotifier = require('youtube-notification')
 import { SendMessage } from './domain/SendMessage'
 import { SlackClient } from './SlackClient'
 import { Push } from './domain/Push'
 import CONFIG from '../config.json'
+const YouTubeNotifier = require('youtube-notification')
 
 export class YoutubeNotificationClient {
-  static initialize() {
+  static initialize () {
     const notifier = new YouTubeNotifier({
       hubCallback: CONFIG.NOTIFICATOR.HUB_CALL
     })
 
-    notifier.subscribe(CONFIG.NOTIFICATOR.ACCOUNT_ID)
+    notifier.subscribe(CONFIG.NOTIFICATOR.ACCOUNT_IDS)
 
     notifier.on('subscribe', (data: Push) => {
       console.log('Subscribed')
@@ -25,7 +25,7 @@ export class YoutubeNotificationClient {
       const service = new SendMessage(slackClient)
       service.run(data).then(() => {}).catch((error) => console.log(error))
     })
-    
+
     return notifier
   }
 }

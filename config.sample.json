@@ -1,7 +1,7 @@
 {
   "NOTIFICATOR": {
     "HUB_CALL": "https://tunnel-service/youtube/notifications",
-    "ACCOUNT_ID": "" 
+    "ACCOUNT_IDS": [""] 
   },
   "EXPRESS": {
     "END_POINT": "/youtube/notifications",
