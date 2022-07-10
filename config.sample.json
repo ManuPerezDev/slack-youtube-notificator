@@ -1,0 +1,17 @@
+{
+  "NOTIFICATOR": {
+    "HUB_CALL": "https://tunnel-service/youtube/notifications",
+    "ACCOUNT_ID": "" 
+  },
+  "EXPRESS": {
+    "END_POINT": "/youtube/notifications",
+    "PORT": 3000
+  },
+  "SLACK_CLIENT": {
+    "TOKEN": "",
+    "APP_TOKEN": "",
+    "SIGN_IN_SECRET": "",
+    "CHANNEL": "",
+    "PORT": 3001
+  }
+}
