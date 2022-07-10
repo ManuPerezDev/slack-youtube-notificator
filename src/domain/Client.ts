@@ -1,3 +1,3 @@
 export interface Client {
-  send(message: string)
+  send(message: string): Promise<void>
 }

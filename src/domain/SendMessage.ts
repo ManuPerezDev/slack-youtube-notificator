@@ -3,7 +3,7 @@ import { Client } from "./Client";
 export class SendMessage {
   constructor(private client: Client) { }
 
-  run(message: any) {
-    this.client.send(JSON.stringify(message, null, 2))
+  async run(message: any) {
+    await this.client.send(JSON.stringify(message, null, 2))
   }
 }
